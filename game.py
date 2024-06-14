@@ -14,3 +14,4 @@ while not exit:
         if event.type == pygame.QUIT: 
             exit = True
     pygame.display.update() 
+print ('hello')
