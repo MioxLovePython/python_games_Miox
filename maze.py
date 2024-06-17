@@ -7,14 +7,14 @@ WALL = u'\u2588'
 EMPTY = ' '
 
 def _shape_maze(maze):
-    """Returns size of maze as `(col, row)`."""
+    """Returns size of maze as `(col, row)` pair."""
     return (
         max(maze.keys(), key=lambda x: x[1])[1] + 1, # width
         max(maze.keys(), key=lambda x: x[0])[0] + 1, # height,
     )
 
 def init_maze(height=7, width=7):
-    """Initialize maze with size height and width."""
+    """Initializes maze with WALL in each cell."""
     maze = {}
     for y in range(height):
         for x in range(width):
